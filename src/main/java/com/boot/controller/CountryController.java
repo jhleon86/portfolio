@@ -18,9 +18,15 @@ public class CountryController {
 	private CountryService countryService;
 
 	@RequestMapping("/country-list")
-	public String country(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
+	public String countryList(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
 		model.addAttribute("list", countryService.selectCountries(paramMap));
 		return "/sample/country-list";
+	}
+	
+	@RequestMapping("/country-edit")
+	public String countryEdit(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
+		model.addAttribute("list", countryService.selectCountries(paramMap));
+		return "/sample/country-edit";
 	}
 	
 //	@RequestMapping("/countryDelete")
