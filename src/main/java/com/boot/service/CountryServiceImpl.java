@@ -23,4 +23,9 @@ public class CountryServiceImpl implements CountryService {
 		return selectCountries;
 	}
 	
+	@Override
+	public int insertCountry(HashMap<String,Object> paramMap) throws Exception {
+		return countryDAO.insertCountry(paramMap);
+	}
+	
 }

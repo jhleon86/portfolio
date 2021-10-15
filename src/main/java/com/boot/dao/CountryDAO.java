@@ -10,4 +10,5 @@ import com.boot.dto.Country;
 @Mapper
 public interface CountryDAO {
 	List<Country> selectCountries(HashMap<String,Object> paramMap) throws Exception;
+	int insertCountry(HashMap<String,Object> paramMap) throws Exception;
 }

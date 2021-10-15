@@ -9,9 +9,21 @@
 	        ,COUNTRY_NAME
 	        ,REGION_ID
 	FROM COUNTRIES
-	<if test='COUNTRY_NAME !=null '>
-	WHERE COUNTRY_NAME LIKE '%'||#{COUNTRY_NAME}||'%'
-	</if>
+<!-- 	<if test='COUNTRY_NAME !=null '> -->
+<!-- 	WHERE COUNTRY_NAME LIKE '%'||#{COUNTRY_NAME}||'%' -->
+<!-- 	</if> -->
   </select>
+  
+  <insert id="insertCountry" parameterType="hashmap">
+  INSERT INTO COUNTRIES (
+  	COUNTRY_ID
+  	, COUNTRY_NAME
+  	, REGION_ID)
+	VALUES (
+	#{countryId} 
+	,#{countryName}
+	,#{regionId} 
+	)
+  </insert>
 
 </mapper>

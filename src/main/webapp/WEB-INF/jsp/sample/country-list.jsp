@@ -27,18 +27,7 @@
                     <span class="logo-text">Country 관리</span>
                 </a>
                 <!-- Menu: main ul -->
-                <ul class="menu-list flex-grow-1 mt-3"> 
-                    <li class="collapsed">
-                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#categories" href="#">
-                            <i class="icofont-chart-flow fs-5"></i> <span>Country</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
-                            <!-- Menu: Sub menu ul -->
-                            <ul class="sub-menu collapse show" id="categories">
-                                <li><a class="ms-link active" href="country-list.html">Country List</a></li>
-                                <li><a class="ms-link" href="country-edit.html">Country Edit</a></li>
-                                <li><a class="ms-link" href="country-add.html">Country Add</a></li>
-                            </ul>
-                    </li>
-                </ul>
+<jsp:include page="left-menu.jsp"></jsp:include>
                 <!-- Menu: menu collepce btn -->
                 <button type="button" class="btn btn-link sidebar-mini-btn text-light">
                     <span class="ms-2"><i class="icofont-bubble-right"></i></span>
@@ -48,7 +37,7 @@
 
         <!-- main body area -->
         <div class="main px-lg-4 px-md-4">  
-
+${cnt }
             <!-- Body: Body -->
             <div class="body d-flex py-3">
                 <div class="container-xxl">
@@ -74,9 +63,9 @@
                                         <tbody>
                                         	<c:forEach items="${list}" var="country">
 												<tr>
-													<td>${country.regionId}</td>
 													<td>${country.countryId}</td>
 													<td>${country.countryName}</td>
+													<td>${country.regionId}</td>
 												</tr>
 											</c:forEach>
                                         </tbody>
@@ -99,24 +88,8 @@
 
     <!-- Jquery Page Js -->
 <!--     <script src="/static/js/template.js"></script> -->
-    <script>
-        $('#myDataTable')
-        .addClass( 'nowrap' )
-        .dataTable( {
-            responsive: true,
-            columnDefs: [
-                { targets: [-1, -3], className: 'dt-body-right' }
-            ]
-        });
-        $('.deleterow').on('click',function(){
-            var tablename = $(this).closest('table').DataTable();  
-            tablename
-            .row( $(this)
-            .parents('tr') )
-            .remove()
-            .draw();
-
-        } );
+    <script> 
+    
     </script>
 </body>
 </html> 
