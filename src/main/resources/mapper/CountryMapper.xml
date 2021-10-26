@@ -8,10 +8,13 @@
 	SELECT COUNTRY_ID
 	        ,COUNTRY_NAME
 	        ,REGION_ID
-	FROM COUNTRIES
-<!-- 	<if test='COUNTRY_NAME !=null '> -->
-<!-- 	WHERE COUNTRY_NAME LIKE '%'||#{COUNTRY_NAME}||'%' -->
-<!-- 	</if> -->
+	FROM COUNTRIES 
+  </select>
+  
+  <select id="selectRegion" resultType="com.boot.dto.Region">
+	select REGION_ID
+			,REGION_NAME
+	from REGIONS
   </select>
   
   <insert id="insertCountry" parameterType="hashmap">

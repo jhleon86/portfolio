@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeDAO employeeDAO;
 	
 	@Override
-	public List<Employee> selectCountries(HashMap<String,Object> paramMap) throws Exception {  
+	public List<Employee> selectEmployee(HashMap<String,Object> paramMap) throws Exception {  
 		
 		List<Employee> selectCountries = employeeDAO.selectEmployee(paramMap);
 		

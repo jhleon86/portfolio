@@ -19,15 +19,15 @@ public class EmployeeController {
 
 	@RequestMapping("/employee-list")
 	public String EmployeeList(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
-		model.addAttribute("list", employeeService.selectCountries(paramMap));
+		model.addAttribute("list", employeeService.selectEmployee(paramMap));
 		return "/sample/employee-list";
 	}
 	
-	@RequestMapping("/employee-edit")
-	public String EmployeeEdit(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
-		model.addAttribute("list", employeeService.selectCountries(paramMap));
-		return "/sample/employee-edit";
-	}
+//	@RequestMapping("/employee-edit")
+//	public String EmployeeEdit(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
+//		model.addAttribute("list", employeeService.selectCountries(paramMap));
+//		return "/sample/employee-edit";
+//	}
 	
 //	@RequestMapping("/EmployeeDelete")
 //	public String EmployeeDelete(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {  

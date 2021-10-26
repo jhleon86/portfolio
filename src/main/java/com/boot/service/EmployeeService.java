@@ -7,6 +7,6 @@ import com.boot.dto.Employee;
 
 public interface EmployeeService {
 
-	List<Employee> selectCountries(HashMap<String, Object> paramMap) throws Exception;
+	List<Employee> selectEmployee(HashMap<String, Object> paramMap) throws Exception;
 
 }

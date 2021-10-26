@@ -99,6 +99,15 @@
                                                 <label  class="form-label">REGION ID</label>
                                                 <input name="regionId" type="text" class="form-control">
                                             </div>
+                                            
+                                            <div>
+                                            	<select>
+	                                            	<c:forEach items="${rlist}" var="r">
+														<option value=${r.regionId }>${r.regionName }</option>
+													</c:forEach>
+                                            	</select>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

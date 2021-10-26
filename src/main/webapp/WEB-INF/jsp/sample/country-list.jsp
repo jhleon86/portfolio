@@ -36,8 +36,7 @@
         </div>    
 
         <!-- main body area -->
-        <div class="main px-lg-4 px-md-4">  
-${cnt }
+        <div class="main px-lg-4 px-md-4">   
             <!-- Body: Body -->
             <div class="body d-flex py-3">
                 <div class="container-xxl">
@@ -61,15 +60,33 @@ ${cnt }
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        	<c:forEach items="${list}" var="country">
+                                        	<c:forEach items="${list.country}" var="c">
 												<tr>
-													<td>${country.countryId}</td>
-													<td>${country.countryName}</td>
-													<td>${country.regionId}</td>
+													<td>${c.countryId}</td>
+													<td>${c.countryName}</td>
+													<td>${c.regionId}</td>
 												</tr>
 											</c:forEach>
                                         </tbody>
                                     </table>
+                                    
+                                    
+                                    <table id="myDataTable" class="table table-hover align-middle mb-0" style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>Region ID</th>
+                                                <th>Region Name</th> 
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        	<c:forEach items="${list.region}" var="r">
+												<tr>
+													<td>${r.regionId}</td>
+													<td>${r.regionName}</td> 
+												</tr>
+											</c:forEach>
+                                        </tbody>
+                                    </table> 
                                 </div>
                             </div>
                         </div>

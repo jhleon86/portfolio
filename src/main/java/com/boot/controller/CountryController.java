@@ -22,12 +22,16 @@ public class CountryController {
 
 	@GetMapping("/country-list")
 	public String countryList(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {
-		model.addAttribute("list", countryService.selectCountries(paramMap));
+		
+//		model.addAttribute("list", countryService.selectCountries(paramMap));
+		model.addAttribute("list", countryService.selectCountries2(paramMap));
 		return "/sample/country-list";
 	}
 	
 	@GetMapping("/country-add")
 	public String countryAdd(@RequestParam HashMap<String,Object> paramMap, Model model) throws Exception {  
+		
+		model.addAttribute("rlist",countryService.selectRegion());
 		
 		return "/sample/country-add";
 	}

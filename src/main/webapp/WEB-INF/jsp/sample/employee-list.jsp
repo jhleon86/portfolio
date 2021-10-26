@@ -63,6 +63,9 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
+                                
+                                ${list}
+                                
                                     <table id="myDataTable" class="table table-hover align-middle mb-0" style="width: 100%;">
                                         <thead>
                                             <tr>
@@ -73,14 +76,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        	<c:forEach items="${list}" var="employee">
-												<tr>
-													<td>${employee.empId}</td>
-													<td>${employee.name}</td>
-													<td>${employee.sal}</td>
-													<td>${employee.deptId}</td>
-												</tr>
-											</c:forEach>
+<%--                                         	<c:forEach items="${list}" var="employee"> --%>
+<!-- 												<tr> -->
+<%-- 													<td>${employee.empId}</td> --%>
+<%-- 													<td>${employee.name}</td> --%>
+<%-- 													<td>${employee.sal}</td> --%>
+<%-- 													<td>${employee.deptId}</td> --%>
+<!-- 												</tr> -->
+<%-- 											</c:forEach> --%>
                                         </tbody>
                                     </table>
                                 </div>
